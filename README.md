@@ -31,6 +31,14 @@ shares its bundle anatomy, hook positions, and containment rules.
 
 ## Install
 
+This repository is the standalone source of the plugin. Inside a DSH home checkout it lives at `plugins/dsh-headroom/`; install it into a profile either from a GitHub checkout:
+
+```bash
+dsh plugin --profile web add github:HeigatVu/dsh-headroom-plugin
+```
+
+or from a local path (this workspace's layout):
+
 ```bash
 dsh plugin --profile web add ../../plugins/dsh-headroom   # from a profile dir; any path to this checkout
 dsh --profile web --dump-config                            # should list @ducvu/dsh-headroom-plugin
