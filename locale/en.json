@@ -1,0 +1,8 @@
+{
+  "meta": {
+    "title": "Headroom Compression",
+    "description": "Context compression for DeepSeek Harness: compresses large, stale history through the local Headroom proxy before it reaches the model, and mounts the Headroom MCP tools (headroom_compress, headroom_retrieve, headroom_stats)."
+  },
+  "markerWithHash": "[headroom] This content was compressed for the model ({before} → {after} tokens). The original is retrievable with mcp__headroom__headroom_retrieve using hash \"{hash}\".\n\n",
+  "markerNoHash": "[headroom] This content was compressed for the model ({before} → {after} tokens).\n\n"
+}

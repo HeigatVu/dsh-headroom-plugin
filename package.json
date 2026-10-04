@@ -1,0 +1,48 @@
+{
+  "name": "@ducvu/dsh-headroom-plugin",
+  "version": "0.1.0",
+  "description": "Headroom context compression for DeepSeek Harness: from-history compression through the local proxy, plus the Headroom MCP tool surface",
+  "icon": "./icon.svg",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "icon.svg",
+    "index.mjs",
+    "config.mjs",
+    "client.mjs",
+    "compress-history.mjs",
+    "mcp.mjs",
+    "locale/",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "check": "for f in *.mjs; do node --check \"$f\" || exit 1; done",
+    "test": "node --test *.test.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-mcp-client": ">=0.1.0-rc.6 <0.3"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "headroom",
+    "compression",
+    "context",
+    "tokens"
+  ],
+  "license": "MIT"
+}

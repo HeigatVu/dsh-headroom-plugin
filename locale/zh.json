@@ -1,0 +1,8 @@
+{
+  "meta": {
+    "title": "Headroom 上下文压缩",
+    "description": "DeepSeek Harness 的上下文压缩插件：在发送给模型之前，通过本地 Headroom 代理压缩会话历史中的大段陈旧内容，并挂载 Headroom MCP 工具（headroom_compress、headroom_retrieve、headroom_stats）。"
+  },
+  "markerWithHash": "[headroom] 此内容已为模型压缩（{before} → {after} tokens）。可通过 mcp__headroom__headroom_retrieve 使用哈希 \"{hash}\" 找回原文。\n\n",
+  "markerNoHash": "[headroom] 此内容已为模型压缩（{before} → {after} tokens）。\n\n"
+}
